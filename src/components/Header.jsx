@@ -12,7 +12,7 @@ const StyledHeader = styled.div`
         display: flex;
         align-items: center;
         width: 100%;
-        padding: 16px 32px;
+        padding: 250px 32px;
         gap: 16px;
     }
 `;
