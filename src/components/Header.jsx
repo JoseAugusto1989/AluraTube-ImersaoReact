@@ -1,5 +1,6 @@
-import config from "../../config.json";
-import styled from "styled-components";
+import styled from 'styled-components';
+
+import config from '../../config.json';
 
 const StyledHeader = styled.div`
     img {
@@ -8,7 +9,6 @@ const StyledHeader = styled.div`
         border-radius: 50%;
     }
     .user-info {
-      margin-top: 50px;
         display: flex;
         align-items: center;
         width: 100%;
@@ -17,17 +17,25 @@ const StyledHeader = styled.div`
     }
 `;
 
+const StyledBanner = styled.div`
+margin-top: 50px;
+  background-color: blue;
+  background-image: url(${config.bg});
+  height: 230px;
+`;
+
 const Header = () => {
   return (
     <StyledHeader>
-      {/* <img src="banner" /> */}
-      <section className="user-info">
-        <img src={`https://github.com/${config.github}.png`} />
-        <div>
-          <h2>{config.name}</h2>
-          <p>{config.job}</p>
-        </div>
-      </section>
+      <StyledBanner>
+        <section className="user-info">
+          <img src={`https://github.com/${config.github}.png`} />
+          <div>
+            <h2>{config.name}</h2>
+            <p>{config.job}</p>
+          </div>
+        </section>
+      </StyledBanner>
     </StyledHeader>
   );
 };
